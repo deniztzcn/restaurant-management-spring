@@ -1,6 +1,7 @@
 # Restaurant Management System
 
 ![Restaurant Management System](RestaurantManagement/images/screenshot1.png)
+![Restaurant Management System](RestaurantManagement/images/screenshot2.png)
 
 ## Project Summary
 
