@@ -21,3 +21,6 @@ The Restaurant Management System is a comprehensive solution designed to streaml
 - **ORM**: Hibernate
 - **REST API**: Java Spring MVC
 - **Security**: Java Spring Security
+
+> **Note**: This project is currently a work in progress. More features and improvements are being added regularly.
+
