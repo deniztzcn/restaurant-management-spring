@@ -1,5 +1,7 @@
 # Restaurant Management System
 
+![Restaurant Management System](images/screenshot1.png)
+
 ## Project Summary
 
 The Restaurant Management System is a comprehensive solution designed to streamline operations within the food service industry, specifically in restaurant management. This system automates various tasks to enhance operational efficiency, improve customer service, and optimize resource utilization. Key functionalities include menu management, order processing, billing, reservation handling, inventory control, and employee management.
