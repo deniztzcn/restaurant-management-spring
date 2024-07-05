@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Felicita Italian Restaurant</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/stylesheets/fragments.css">
+    <link rel="stylesheet" href="/stylesheets/home.css">
+</head>
+<body>
+<header th:replace="~{fragments :: myHeader}" class="container-fluid py-3"></header>
+
+<div th:if="${#authorization.expression('isAnonymous() or hasRole(''USER'')')}" class="container py-5">
+    <h2 class="pb-2 border-bottom">About Us</h2>
+    <p>Welcome to Felicita, where traditional flavors meet the modern culinary landscape in a cozy yet vibrant setting. Nestled in the bustling heart of the city, Felicita is not just a restaurant; it's an escape to the rustic charm and warmth of Italy.
+
+        As soon as you step through the doors of Felicita, you're greeted by an ambiance that blends classic Italian aesthetics with contemporary elegance. The décor is a thoughtful mix of old-world charm and modern chic, featuring exposed brick walls adorned with vintage Italian posters and sleek, comfortable seating.
+
+        At Felicita, our menu is a celebration of Italian culinary traditions, crafted from the freshest local ingredients and a passion for hearty, flavor-packed dishes. Start your meal with our signature antipasti, like Bruschetta al Pomodoro or Calamari Fritti, which set the stage for the indulgent experience to follow.
+    </p>
+</div>
+
+<div th:if="${#authorization.expression('isAnonymous()')}" class="container py-5 text-center">
+    <h2>Ready to Order?</h2>
+    <p>Register or log in to order online!</p>
+    <a href="/register" class="btn btn-register">Register</a>
+    <a href="/login" class="btn btn-login">Login</a>
+</div>
+
+<div class="container py-5">
+    <div th:if="${#authorization.expression('hasRole(''USER'')')}">
+        <div class="d-flex justify-content-between">
+            <a th:href="@{/reservations}" class="btn btn-reservation btn-lg">Go to Reservation Page</a>
+            <a th:href="@{/order}" class="btn btn-order btn-lg">Go to Order Page</a>
+        </div>
+    </div>
+</div>
+
+<div class="container py-5">
+    <h2 class="pb-2 border-bottom">Contact Us</h2>
+    <address>
+        <strong>Phone:</strong> 123-456-7890<br>
+        <strong>Email:</strong> <a href="mailto:info@felicita.com">info@felicita.com</a>
+    </address>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<footer th:replace="~{fragments :: myFooter}"></footer>
+</body>
+</html>

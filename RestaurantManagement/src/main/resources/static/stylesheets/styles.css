@@ -1,0 +1,73 @@
+body {
+    background-color: #fff5e6;
+    color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.nav-link {
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover, .nav-link:focus {
+    color: #b30000;
+    background-color: transparent;
+}
+
+.btn-register {
+    background-color: #b30000;
+    color: #ffffff;
+    border: none;
+}
+
+.btn-register:hover, .btn-register:focus {
+    background-color: #960000;
+    color: #ffffff;
+}
+
+.btn-login {
+    background-color: #f0f0f0;
+    color: #333333;
+    border: 1px solid #cccccc;
+}
+
+.btn-login:hover, .btn-login:focus {
+    background-color: #e0e0e0;
+    color: #333333;
+}
+
+
+header {
+    background-color: #004d00;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+.card {
+    border: 1px solid #004d00;
+}
+
+.card-header {
+    background-color: #b30000;
+    color: #fff;
+    font-size: 1.5em;
+}
+
+.list-group-item {
+    background-color: #f4f4f4;
+    border: none;
+}
+
+
+footer {
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+.badge-custom {
+    background-color: #004d00;
+    color: #ffffff;
+}
+

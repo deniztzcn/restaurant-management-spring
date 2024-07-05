@@ -1,0 +1,23 @@
+header {
+    background-color: #004d00;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+.nav-link {
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover, .nav-link:focus {
+    color: #b30000;
+    background-color: transparent;
+}
+
+footer {
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}

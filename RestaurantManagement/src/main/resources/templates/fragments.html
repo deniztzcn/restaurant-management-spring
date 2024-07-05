@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="myHead">
+    <meta charset="UTF-8">
+    <title th:text="${title}"></title>
+    <link rel="stylesheet" type="text/css" th:href="@{/stylesheets/fragments.css}" href="../static/stylesheets/fragments.css">
+</head>
+<body>
+<header th:fragment="myHeader" class="container-fluid py-3">
+    <h1 th:text="${header}">Felicita Italian Restaurant</h1>
+    <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between">
+        <img class="logo" src="../static/images/logo.png" th:src="@{/images/logo.png}" alt="Restaurant Logo" height="100" width="100">
+        <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+            <li><a href="/homePage" class="nav-link px-2 link-dark">Home</a></li>
+            <li th:if="${#authorization.expression('isAnonymous()')}">
+                <a th:href="@{/login}" class="nav-link px-2 link-dark">Login</a>
+            </li>
+            <li th:if="${#authorization.expression('isAuthenticated()')}" class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Account
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li th:if="${#authorization.expression('hasRole(''ADMIN'')')}"><a th:href="@{/adminPage}" class="dropdown-item">Admin Page</a></li>
+                    <li th:if="${#authorization.expression('hasRole(''USER'') or hasRole(''ADMIN'')')}"><a th:href="@{/update}" class="dropdown-item">Settings</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a th:href="@{/logout}" class="dropdown-item">Logout</a></li>
+                </ul>
+            </li>
+            <li><a href="/menu" class="nav-link px-2 link-dark">Menu</a></li>
+            <li><a href="#contact" class="nav-link px-2 link-dark">Contact</a></li>
+        </ul>
+    </div>
+</header>
+<footer th:fragment="myFooter" class="py-3 my-4">
+    <p class="text-center text-muted">© 2024 Felicita Italian Restaurant</p>
+</footer>
+</body>
+</html>

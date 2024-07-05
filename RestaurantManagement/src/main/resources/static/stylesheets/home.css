@@ -1,0 +1,49 @@
+body {
+    background-color: #fff5e6;
+    color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.btn-register {
+    background-color: #b30000;
+    color: #ffffff;
+    border: none;
+}
+
+.btn-register:hover, .btn-register:focus {
+    background-color: #960000;
+    color: #ffffff;
+}
+
+.btn-login {
+    background-color: #f0f0f0;
+    color: #333333;
+    border: 1px solid #cccccc;
+}
+
+.btn-login:hover, .btn-login:focus {
+    background-color: #e0e0e0;
+    color: #333333;
+}
+
+.btn-reservation {
+    background-color: #ff6600;
+    color: #ffffff;
+    border: none;
+}
+
+.btn-reservation:hover, .btn-reservation:focus {
+    background-color: #cc5200;
+    color: #ffffff;
+}
+
+.btn-order {
+    background-color: #b3b3b3;
+    color: #333333;
+    border: none;
+}
+
+.btn-order:hover, .btn-order:focus {
+    background-color: #999999;
+    color: #333333;
+}

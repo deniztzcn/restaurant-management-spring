@@ -1,0 +1,40 @@
+spring:
+  application:
+    name: RestaurantManagement
+  h2:
+    console:
+      path: /restaurant-db
+  datasource:
+    url: jdbc:h2:file:./db/restaurant-db;DATABASE_TO_UPPER=false
+    username: sa
+    password:
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    defer-datasource-initialization: true
+  sql:
+    init:
+      mode: always
+      data-locations: classpath:sql-data/initial-data.sql
+logging:
+  level:
+    org:
+        springframework:
+          security: DEBUG
+    hibernate:
+      SQL: DEBUG
+      type:
+        descriptor:
+          sql:
+            BasicBinder: TRACE
+    pja:
+        edu:
+          pl:
+            s26772:
+              restaurantmanagement: DEBUG
+app:
+  security:
+    enabled: false
